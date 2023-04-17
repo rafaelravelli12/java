@@ -69,8 +69,7 @@ public class Dashboard extends JFrame{
                             new AddDrivers().setVisible(true);
                         }catch(Exception e ){}
                     }
-                });
-        		
+                });        		
         setSize(1950,1090);
 	setVisible(true);
         getContentPane().setBackground(Color.WHITE);

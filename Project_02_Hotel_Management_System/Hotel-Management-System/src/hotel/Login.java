@@ -17,7 +17,7 @@ public class Login extends JFrame implements ActionListener{
     }
      
     Login(){
-        super("Login");
+        super("LOGIN");
 
         setLayout(null);
 

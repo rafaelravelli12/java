@@ -8,17 +8,17 @@ import javax.swing.*;
 
 public class AddEmployee extends JFrame{
     
-    JTextField textField01,textField02,textField05,textField06,textField07,textField08,textField_6;
-    JComboBox comboBox01;
+    JTextField textField01,textField02,textField05,textField06,textField07,textField08;
+    JComboBox comboBox04;
     
     public static void main(String[] args){
         new AddEmployee();
     }
 
     public AddEmployee(){
+        super("ADD EMPLOYEE DETAILS");
         getContentPane().setForeground(Color.BLUE);
         getContentPane().setBackground(Color.WHITE);
-        setTitle("ADD EMPLOYEE DETAILS");
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setSize(778,486);
         getContentPane().setLayout(null);
@@ -57,10 +57,10 @@ public class AddEmployee extends JFrame{
         FormField04.setBounds(60, 170, 150, 27);
         add(FormField04);
         String course[] = {"Front Desk Clerks","Porters","Housekeeping","Kitchen Staff","Room Service","Waiter/Waitress","Manager","Accountant","Chef"};
-        comboBox01 = new JComboBox(course);
-        comboBox01.setBackground(Color.WHITE);
-        comboBox01.setBounds(200,170,150,30);
-        add(comboBox01);
+        comboBox04 = new JComboBox(course);
+        comboBox04.setBackground(Color.WHITE);
+        comboBox04.setBounds(200,170,150,30);
+        add(comboBox04);
 
         JLabel FormField05 = new JLabel("SALARY");
         FormField05.setFont(new Font("Tahoma", Font.PLAIN, 17));
@@ -123,7 +123,7 @@ public class AddEmployee extends JFrame{
                     }else if(NewRadioButton02.isSelected()){
                         gender = "female";
                     }
-                String genderMod = (String)comboBox01.getSelectedItem();
+                String job = (String)comboBox04.getSelectedItem();
                 String salary = textField05.getText();
                 String phone = textField06.getText();
                 String aadhar = textField07.getText();
@@ -131,7 +131,7 @@ public class AddEmployee extends JFrame{
                 
                 try {
                     conn c = new conn();
-                    String str = "INSERT INTO employee values( '"+name+"', '"+age+"', '"+gender+"','"+genderMod+"', '"+salary+"', '"+phone+"','"+aadhar+"', '"+email+"')";
+                    String str = "INSERT INTO employee values( '"+name+"', '"+age+"', '"+gender+"','"+job+"', '"+salary+"', '"+phone+"','"+aadhar+"', '"+email+"')";
                     c.s.executeUpdate(str);
                     JOptionPane.showMessageDialog(null,"Employee Added");
                     setVisible(false);
