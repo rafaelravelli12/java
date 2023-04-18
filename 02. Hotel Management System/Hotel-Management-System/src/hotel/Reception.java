@@ -44,7 +44,7 @@ public class Reception extends JFrame {
         button01.setForeground(Color.WHITE);
         contentPane.add(button01);
 
-        JButton button02 = new JButton("Room");
+        JButton button02 = new JButton("All Room info");
         button02.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 try{
@@ -80,7 +80,7 @@ public class Reception extends JFrame {
         button03.setForeground(Color.WHITE);
         contentPane.add(button03);
 
-        JButton button04 = new JButton("Customer Info");
+        JButton button04 = new JButton("All Customer Info");
         button04.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try{
@@ -98,7 +98,7 @@ public class Reception extends JFrame {
         button04.setForeground(Color.WHITE);
         contentPane.add(button04);
 
-        JButton button05 = new JButton("Manager Info");
+        JButton button05 = new JButton("All Manager Info");
         button05.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try{
@@ -116,8 +116,28 @@ public class Reception extends JFrame {
         button05.setForeground(Color.WHITE);
         contentPane.add(button05);
 
-        JButton button06 = new JButton("Check Out");
+        
+
+        JButton button06 = new JButton("Update Check Status");
         button06.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    UpdateCheck update = new UpdateCheck();
+                    update.setVisible(true);
+                    setVisible(false);
+                }
+                catch(Exception e1){
+                    e1.printStackTrace();
+                }
+            }
+        });
+        button06.setBounds(10, 230, 200, 30);
+        button06.setBackground(Color.BLACK);
+        button06.setForeground(Color.WHITE);
+        contentPane.add(button06);
+      
+        JButton button07 = new JButton("Check Out a Customer");
+        button07.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 CheckOut check;
                 try {
@@ -130,29 +150,11 @@ public class Reception extends JFrame {
                 }
             }
         });
-        button06.setBounds(10, 230, 200, 30);
-        button06.setBackground(Color.BLACK);
-        button06.setForeground(Color.WHITE);
-        contentPane.add(button06);
-
-        JButton button07 = new JButton("Update Check Status");
-        button07.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                try{
-                    UpdateCheck update = new UpdateCheck();
-                    update.setVisible(true);
-                    setVisible(false);
-                }
-                catch(Exception e1){
-                    e1.printStackTrace();
-                }
-            }
-        });
         button07.setBounds(10, 270, 200, 30);
         button07.setBackground(Color.BLACK);
         button07.setForeground(Color.WHITE);
         contentPane.add(button07);
-
+        
         JButton button08 = new JButton("Update Room Status");
         button08.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -168,7 +170,7 @@ public class Reception extends JFrame {
         button08.setBounds(10, 310, 200, 30);
         button08.setBackground(Color.BLACK);
         button08.setForeground(Color.WHITE);
-        contentPane.add(button08);
+        contentPane.add(button08);        
 
         JButton button09 = new JButton("Pick up Service");
         button09.addActionListener(new ActionListener() {

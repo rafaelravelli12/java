@@ -2,7 +2,6 @@ package hotel;
 
 import java.awt.BorderLayout;
 import java.awt.*;
-
 import java.sql.*;
 import javax.swing.*;
 import javax.swing.JFrame;
@@ -55,9 +54,9 @@ public class SearchRoom extends JFrame {
         BodyTitle.setBounds(250, 11, 186, 31);
         contentPane.add(BodyTitle);
 
-        JLabel lblRoomAvailable = new JLabel("Room Bed Type:");
-        lblRoomAvailable.setBounds(50, 73, 96, 14);
-        contentPane.add(lblRoomAvailable);
+        JLabel FormField01 = new JLabel("Room Bed Type:");
+        FormField01.setBounds(50, 73, 96, 14);
+        contentPane.add(FormField01);
         c1 = new Choice();
         c1.add("Single Bed");
         c1.add("Double Bed");
@@ -69,25 +68,29 @@ public class SearchRoom extends JFrame {
         checkRoom.setBackground(Color.WHITE);
         contentPane.add(checkRoom);
         
-        JLabel lblRoomType = new JLabel("Room Number");
-        lblRoomType.setBounds(23, 162, 96, 14);
-        contentPane.add(lblRoomType);
-
-        JLabel lblRoomAvailable_1 = new JLabel("Availability");
-        lblRoomAvailable_1.setBounds(175, 162, 120, 14);
-        contentPane.add(lblRoomAvailable_1);
+        table = new JTable();
+        table.setBounds(20, 190, 700, 200);
+        contentPane.add(table);
         
-        JLabel lblCleanStatus = new JLabel("Clean Status");
-        lblCleanStatus.setBounds(306, 162, 96, 14);
-        contentPane.add(lblCleanStatus);       
+            JLabel tableLabel01 = new JLabel("Room Number");
+            tableLabel01.setBounds(23, 162, 96, 14);
+            contentPane.add(tableLabel01);
 
-        JLabel lblPrice_1 = new JLabel("Price");
-        lblPrice_1.setBounds(458, 162, 46, 14);
-        contentPane.add(lblPrice_1);
+            JLabel tableLabel02 = new JLabel("Availability");
+            tableLabel02.setBounds(175, 162, 120, 14);
+            contentPane.add(tableLabel02);
 
-        JLabel l1 = new JLabel("Bed Type");
-        l1.setBounds(580, 162, 96, 14);
-        contentPane.add(l1);
+            JLabel tableLabel03 = new JLabel("Clean Status");
+            tableLabel03.setBounds(306, 162, 96, 14);
+            contentPane.add(tableLabel03);       
+
+            JLabel tableLabel04 = new JLabel("Price");
+            tableLabel04.setBounds(458, 162, 46, 14);
+            contentPane.add(tableLabel04);
+
+            JLabel tableLabel05 = new JLabel("Bed Type");
+            tableLabel05.setBounds(580, 162, 96, 14);
+            contentPane.add(tableLabel05);
 
         JButton btnSearch = new JButton("Search");
         btnSearch.addActionListener(new ActionListener() {
@@ -126,10 +129,6 @@ public class SearchRoom extends JFrame {
         btnExit.setBackground(Color.BLACK);
         btnExit.setForeground(Color.WHITE);
         contentPane.add(btnExit);
-
-        table = new JTable();
-        table.setBounds(0, 187, 700, 300);
-        contentPane.add(table);
 
         getContentPane().setBackground(Color.WHITE);
     }
