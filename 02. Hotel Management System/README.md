@@ -23,6 +23,8 @@ Required commands to run the Project:
 - Run folder /Hotel-Management-System on NetBeans;
 - Run database.sql as a HeidiSQL query;
 - Add /Hotel-Management-System/mysql-connector-java-8.0.27.jar and /Hotel-Management-System/rs2xml.jar Libraries;
-- 'Run file' Hotel-Management-System/src/hotel/Login.java on NetBeans.
+- 'Run file' Hotel-Management-System/src/hotel/Login.java on NetBeans;
+- Login: admin
+  Password: 12345
 
 Graciously,
