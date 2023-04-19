@@ -20,8 +20,9 @@ This software was developed in HeidiSQL database administration tool: https://ww
 
 Required commands to run the Project:
 
-- Run folder Hotel-Management-System on NetBeans;
+- Run folder /Hotel-Management-System on NetBeans;
 - Run database.sql as a HeidiSQL query;
+- Add /Hotel-Management-System/mysql-connector-java-8.0.27.jar and /Hotel-Management-System/rs2xml.jar Libraries;
 - 'Run file' Hotel-Management-System/src/hotel/Login.java on NetBeans.
 
 Graciously,
