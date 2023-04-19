@@ -11,23 +11,12 @@ public class Dashboard extends JFrame{
     }
     
     public Dashboard() {
-        super("HOTEL MANAGEMENT SYSTEM");
+        super("Dashboard");
         setForeground(Color.CYAN);
         setLayout(null);
+ 	setVisible(true);
+        setSize(1950,1090);
         
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/third.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1950, 1000,Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2); 
-	JLabel NewLabel = new JLabel(i3);
-	NewLabel.setBounds(0, 0, 1950, 1000); 
-        add(NewLabel);
-        
-        JLabel HotelManagementSystem = new JLabel("THE TAJ GROUP WELCOMES YOU");
-	HotelManagementSystem.setForeground(Color.WHITE);
-        HotelManagementSystem.setFont(new Font("Tahoma", Font.PLAIN, 46));
-	HotelManagementSystem.setBounds(600, 60, 1000, 85);
-	NewLabel.add(HotelManagementSystem);
-	
         JMenuBar menuBar = new JMenuBar();
 	setJMenuBar(menuBar);	
             JMenu MenuOption01 = new JMenu("HOTEL MANAGEMENT");
@@ -69,9 +58,20 @@ public class Dashboard extends JFrame{
                             new AddDrivers().setVisible(true);
                         }catch(Exception e ){}
                     }
-                });        		
-        setSize(1950,1090);
-	setVisible(true);
+                });      
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/third.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(1950, 1000,Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2); 
+        JLabel NewLabel = new JLabel(i3);
+        NewLabel.setBounds(0, 0, 1950, 1000); 
+        add(NewLabel);
+
+        JLabel HotelManagementSystem = new JLabel("THE TAJ GROUP WELCOMES YOU");
+        HotelManagementSystem.setForeground(Color.WHITE);
+        HotelManagementSystem.setFont(new Font("Tahoma", Font.PLAIN, 46));
+        HotelManagementSystem.setBounds(600, 60, 1000, 85);
+        NewLabel.add(HotelManagementSystem);                
+
         getContentPane().setBackground(Color.WHITE);
     }
 }

@@ -16,7 +16,7 @@ public class AddEmployee extends JFrame{
     }
 
     public AddEmployee(){
-        super("ADD EMPLOYEE DETAILS");
+        super("Add Employee");
         getContentPane().setForeground(Color.BLUE);
         getContentPane().setBackground(Color.WHITE);
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
