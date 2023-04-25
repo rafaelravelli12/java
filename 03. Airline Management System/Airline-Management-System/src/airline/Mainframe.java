@@ -14,14 +14,13 @@ public class Mainframe extends JFrame{
         super("AIRLINE RESERVATION MANAGEMENT SYSTEM");
         initialize();
     }
-
     
     private void initialize() {
         
         setLayout(null);
         getContentPane().setBackground(Color.WHITE);
-        setSize(860,600);
-        setLocation(400,200);
+        setLocation(100,100);        
+        setSize(860,600);        
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Home Page");
         
@@ -50,18 +49,9 @@ public class Mainframe extends JFrame{
                 
                 JMenuItem FlightDetails = new JMenuItem("Flight Info");
                 AirlineSystem.add(FlightDetails);
-
-                JMenuItem ReservationDetails = new JMenuItem("ADD_CUSTOMER_DETAILS");
-                AirlineSystem.add(ReservationDetails);
-
-                JMenuItem PassengerDetails = new JMenuItem("Journey Details");
-                AirlineSystem.add(PassengerDetails);
-
-                JMenuItem SectorDetails_1 = new JMenuItem("PAYMENT_DETAILS");
-                AirlineSystem.add(SectorDetails_1);
-
-                JMenuItem Cancellation = new JMenuItem("CANCELLATION");
-                AirlineSystem.add(Cancellation);
+                
+                JMenuItem TicketPurchase= new JMenuItem("Ticket Purchase");
+                AirlineSystem.add(TicketPurchase);
 
             JMenu exit = new JMenu("Logout");
             exit.setForeground(Color.RED);
@@ -84,42 +74,9 @@ public class Mainframe extends JFrame{
             }
 	});
         
-	ReservationDetails.addActionListener(new ActionListener(){
+        TicketPurchase.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
-                try {
-                    new Add_Customer();
-                    setVisible(false);
-		} catch (Exception e) {
-                    e.printStackTrace();
-		} 
-            }
-	});
-		
-        PassengerDetails.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent ae){
-                try {
-                    new Journey_Details();
-                    setVisible(false);
-                } catch (Exception e) {
-                    e.printStackTrace();
-		}
-            }
-	});
-		
-        SectorDetails_1.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent ae){
-                try {
-                    new Payment_Details();
-                    setVisible(false);
-		} catch (Exception e) {
-                    e.printStackTrace();
-		}
-            }
-	});
-		
-        Cancellation.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent ae){
-                new Cancel();
+                new TicketPurchase();
                 setVisible(false);
             }
 	});

@@ -6,35 +6,35 @@ import java.sql.*;
 import javax.swing.*;
 import net.proteanit.sql.DbUtils;
 
-public class FlightInfo extends JFrame{
+public class TicketPurchase extends JFrame{
 
     JTable table;
 
     public static void main(String[] args){
-        new FlightInfo();
+        new TicketPurchase();
     }
     
-    public FlightInfo(){
+    public TicketPurchase(){
         
 	setLayout(null);
         getContentPane().setBackground(Color.WHITE);
         setLocation(100,100);       
         setSize(860,600);
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Flight Info");
+        setTitle("Ticket Purchase");
         
-	JLabel SubTitle = new JLabel("Flight Info");
+	JLabel SubTitle = new JLabel("Ticket Purchase");
 	SubTitle.setForeground(Color.BLUE);
 	SubTitle.setFont(new Font("Tahoma", Font.PLAIN, 31));
 	SubTitle.setBounds(30, 30, 400, 50);
         SubTitle.setVerticalAlignment(SwingConstants.CENTER);
 	add(SubTitle);
         		       
-        JButton Add = new JButton("Add new Flight");
+        JButton Add = new JButton("Add new Ticket");
 	Add.setBounds(30, 100, 200, 30);
 	add(Add);
                
-        JButton Show = new JButton("Show All Flights");
+        JButton Show = new JButton("Show All Tickets");
 	Show.setBounds(250, 100, 200, 30);
 	add(Show);
         
@@ -52,7 +52,7 @@ public class FlightInfo extends JFrame{
             
         Add.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                new AddNewFlight();
+                new AddNewTicket();
                 setVisible(false);
             }
         });
@@ -61,7 +61,7 @@ public class FlightInfo extends JFrame{
             public void actionPerformed(ActionEvent ae){
 		try{
                     conn c = new conn();
-                    String str = "select * from flight_info";
+                    String str = "select * from ticket";
                     ResultSet rs= c.s.executeQuery(str);
                     table.setModel(DbUtils.resultSetToTableModel(rs));		                   	
 		}catch(Exception e){}
