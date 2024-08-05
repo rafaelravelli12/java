@@ -1,4 +1,4 @@
-<img src="java_logo.jpg" width="300" />
+<img src="java_logo.png" width="300" />
 
 ![GitHub commits](https://img.shields.io/github/commit-activity/m/rafaelravelli12/java)
 
