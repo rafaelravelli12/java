@@ -1,9 +1,11 @@
-# Projects Java
+<img src="java_logo.jpg" width="300" />
 
-![image](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![GitHub commits](https://img.shields.io/github/commit-activity/m/rafaelravelli12/java)
+
+# Java
 
 ### Estimeed Sirs,
 
-This repository is being used as showcase for courses and personal projects using Java.
+This repository is being used as a showcase for courses and personal projects using Java.
 
 Graciously,
